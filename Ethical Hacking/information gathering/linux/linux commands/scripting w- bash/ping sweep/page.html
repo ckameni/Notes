@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ping Sweep</title>
+</head><body>i want a ping a device, if this deveice is alive, go on and show me the result. this is going to sweep th entire network!<br/>
+<br/>
+1. identify a device that is alive, so it can be tested.<br/>
+&nbsp;as my network is on a NATed network, i'm running under a different IP Address subnet as the one showed when i type ip -a<br/>
+<img src="image.png" /><br/>
+<br/>
+2. My actual IP Address is on a<b>&nbsp;.4.X </b>&nbsp; (192.168.4.X). for this example i am going to ping <b>192.168.4</b>.29<br/>
+<b>ping 192.168.4.29<br/>
+</b><img src="image 2.png" /><br/>
+if you are unsure of an IP address in your house that is active or your subnet in your house, you can simply run:<br/>
+<b>ping 192.168.57.</b>1<b><br/>
+</b><b><br/>
+</b>or what ever your IP address is on the 3 rd octet. that would also work.<b><br/>
+</b><b><br/>
+</b>you might not get a lot of returned results, bu you'all get 1 or 2, when we do the sweep. but i advise you to figure<br/>
+out what your IP is.<br/>
+<br/>
+3. Lets try to ping a different IP that is not in our network with a count of 1. And try to send 1 package over and see, if it works.<br/>
+As a result, we'll see, that it will not work!<br/>
+<b>ping 192.168.41.29 -C 1<br/>
+<br/>
+</b><img src="image 3.png" /><br/>
+<br/>
+4. A quick comparison <br/>
+<img src="image 4.png" /><br/>
+<br/>
+5 Ping my actual IP with a count of 1. And export the respons to a file named ip.txt<br/>
+<br/>
+<b>ping 192.168.4.29 -C 1 &gt; ip.txt<br/>
+cat ip.txt<br/>
+</b><img src="image 5.png" /><br/>
+<br/>
+6. let's start gathering data based up what we have in <b>ip.txt<br/>
+</b>6.1. let's start by extracting the first line that is marked in the picture<br/>
+<img src="image 6.png" /><br/>
+<br/>
+<b>cat ip.txt | grep "64 bytes"<br/>
+<img src="image 7.png" /><br/>
+<br/>
+</b>We're building a ping sweeper to check all IP addresses in a specific subnet. For example, in the subnet 192.168.4.x, <br/>
+we want to ping every address from 192.168.4.1 to 192.168.4.255 to see which ones are active. We'll send a single ping <br/>
+to each address and look for a response like 64 bytes from 192.168.4.X. From the responses, we'll extract and list only <br/>
+the IPs that are alive. Finally, I'll show you how to run this process in one go and retrieve the active IP addresses efficiently. &nbsp;<br/>
+<b><br/>
+</b>6.2 extract the IP address from the reponse<br/>
+<b>cat ip.txt | grep "64 bytes" | cut -d " " -f 4<br/>
+<img src="image 8.png" /><br/>
+</b><b>Explanation: </b>We're going to use the cut command to extract specific parts of a line of text. To do this, we need to define a delimiter, which is <br/>
+what separates the parts of the line. In this case, we’ll use a space (-d " "). Then, we specify which part (or field) to extract using -f, and we'll choose <br/>
+the 4th field (-f 4). This means cut will split the line at every space and grab the 4th part, which will be the IP address &nbsp;<br/>
+<br/>
+6.3 clean the IP Address<br/>
+<b>cat ip.txt | grep "64 bytes" | cut -d " " -f 4</b>&nbsp;<b>| tr -d ";"<br/>
+</b><img src="image 9.png" /><br/>
+<br/>
+Now we have the IP address, but there’s an issue: it has a colon (;) at the end (e.g., 192.168.4.29;). We want to remove that <br/>
+and keep just the IP address (e.g., 192.168.4.29). To fix this, we’ll use the tr (translate) command with the -d option to delete <br/>
+the ;. We add another pipe and run tr -d ";". After this, the IP address will be cleaned up, leaving just the part we need &nbsp;<br/>
+<br/>
+6.4 how ca we apply this to something bigger? to a whole list.<br/>
+6.4.1 create a bash file <br/>
+<b>mousepad ipsweep.sh<br/>
+<img src="image 10.png" /><br/>
+<br/>
+</b>6.4.2 declare the file as a bash file<br/>
+<b>#!/bin/bash<br/>
+</b><img src="image 11.png" /><br/>
+<br/>
+<br/>
+6.4.3 create a loop to retrieve ips from 192.168.4.1 to 192.168.4.254<br/>
+<b>for ip in `seq 1 254`; do<br/>
+ping -C $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ";" &amp;<br/>
+done<br/>
+</b><img src="image 12.png" /><br/>
+<br/>
+6.4.4 run the bash file<br/>
+<b>chmod +x ipsweep.sh<br/>
+./ipsweep.sh 192.168.4<br/>
+<img src="image 13.png" /><br/>
+</b><br/>
+6.4.5 &nbsp;make sue the script cannot be run without argument<br/>
+<b>if ["$1" == ""] # if no argument is entered<br/>
+then<br/>
+echo "You forgot an IP Address"<br/>
+echo "Syntax: ./ipsweep.sh 192.168.4"<br/>
+</b><b>else</b><br/>
+<b>for ip in `seq 1 254`; do<br/>
+ping -C $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ";" &amp;<br/>
+done<br/>
+</b><b>fi</b><br/>
+<img src="image 14.png" /><br/>
+<br/>
+test the srcipt without and with argument<br/>
+<b>./ipsweep.sh </b><br/>
+<b>./ipsweep.sh 192.168.4</b><br/>
+<img src="image 15.png" /><br/>
+<br/>
+6.4.6 Store the results in a text file<br/>
+<b>./ipsweep.sh 192.168.4 &gt; ips.txt<br/>
+</b><img src="image 16.png" /><br/>
+<br/>
+6.5 now wwe have a list of ip addresses, now we want to do port scanning( nmap)<br/>
+<br/>
+6.5.1 example:<br/>
+<b>nmap -T4 - A -p-</b><br/>
+<img src="image 17.png" /><br/>
+<br/>
+6.5.2 &nbsp;we can run nman für every ip address in a specific network <b>192.168.4.0/24</b>. but that will time in looking and finding <br/>
+which IP addresses are valid.<br/>
+<b>nmap 192.168.4.0/24</b><br/>
+<br/>
+<br/>
+6.5.3 But as we have a list of valid ips we can stream up the process<br/>
+<b>for ip in $(cat ips.txt); do nmap $ip &amp; done<br/>
+</b><img src="image 18.png" /><br/>
+<br/>
+</body></html>

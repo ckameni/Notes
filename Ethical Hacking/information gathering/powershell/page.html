@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PowerShell</title>
+</head><body><br/>
+cd E:\Sikali<br/>
+<br/>
+Get-ChildItem -Include *.mp4 -Recurse | select &nbsp;DirectoryName, Name | FT | Export-Csv videos.csv -NoTypeInformation<br/>
+<br/>
+<br/>
+<b>Get-ChildItem -Include *.mp4 -Recurse | select &nbsp;DirectoryName, Name | FT</b>&nbsp;| Export-Csv videos.csv<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+Get-Childitem –Path C:\ -Include *.mp4 -Recurse -ErrorAction SilentlyContinue<br/>
+</body></html>

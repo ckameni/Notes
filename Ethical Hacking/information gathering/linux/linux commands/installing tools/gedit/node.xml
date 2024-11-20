@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Gedit</string>
+  <key>nodeid</key><string>6f0ad2a1-42c9-4d9a-a724-d4b1d486a0d9</string>
+  <key>modified_time</key><integer>1732109769</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1732109395</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>
