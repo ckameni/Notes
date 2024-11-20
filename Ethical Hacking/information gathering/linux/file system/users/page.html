@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Users</title>
+</head><body>add a new user:<br/>
+<br/>
+<b>adduser</b>&nbsp;john<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+some time when you are doing Penetration testing, you are going to have access to the <b>etc/passwd</b>&nbsp; file, because it doesn't provide the password. it used to. but <br/>
+passwords are now located in the <b>shadow</b>&nbsp;file.<br/>
+<br/>
+open the etc/passwd file. this file show you all the users<br/>
+<b>cat /etc/passwd<br/>
+</b><img src="image 2.png" /><br/>
+<br/>
+<br/>
+open the etc/shadow file. where the passwords of the users are store<br/>
+<b>cat /etc/shadow</b><br/>
+<img src="image 3.png" /><br/>
+<br/>
+switching users<br/>
+<b>su</b>&nbsp;john<br/>
+<img src="image 4.png" /><br/>
+<br/>
+<br/>
+try to change root password with elevated permission. will fail, because John is a base user.<br/>
+<b>sudo passwd root<br/>
+</b>we will encounter that &nbsp;a lot of time in penetration testing, where if we get in, we'll get something called Lower priviledge. And will get an account like john, <br/>
+and we are going to try to escalate into root. but we cannot just do it. The chance of having a john in &nbsp;a <b>sudoers</b>&nbsp;file, is just not that high. <br/>
+if you want a user other that root to have access to file permission, you need to have them in the <b>sudoers</b>&nbsp;file<br/>
+<br/>
+<img src="image 5.png" /><br/>
+<br/>
+</body></html>

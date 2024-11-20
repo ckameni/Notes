@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Permissions</title>
+</head><body><br/>
+the tmp folder has full <b>read write execute(rwx)</b>, so when we are doing a penetration testing, we trying to upload some sort of<br/>
+exploit. we might actually upload it into the tmp folder because that is where we can execute those files! we also maybe want to find other <br/>
+read write execute files, where we can modify them and give us root access to a system. so it's all about insecure configurations.<br/>
+<br/>
+<b>ls -la</b>&nbsp;/tmp/<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+we can also create a scritp that is not going to execute until it has full access.<br/>
+So do we change access?<br/>
+<br/>
+tripple 7 gives you full access across the board<br/>
+<b>chmod &nbsp;777</b>&nbsp;hello.txt &nbsp;<br/>
+<b>chmod &nbsp;+x</b>&nbsp;hello.txt<br/>
+<img src="image 2.png" /><br/>
+<br/>
+</body></html>

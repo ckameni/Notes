@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Network Commands</title>
+</head><body><br/>
+<b>ifconfig</b><br/>
+<img src="image.png" /><br/>
+<br/>
+if your machine has a wireless adapter or if you want to do wireless penetration testing, you're going to need iwconfig. And you should not expect to see anaything on this at<br/>
+the moment, unless your are using a laptop, then actually you might some configuration<br/>
+<b>iwconfig<br/>
+</b><img src="image 2.png" /><br/>
+<br/>
+<br/>
+<br/>
+if i ping my own router, i would get replies back(for ever) until i type CTRL+C &nbsp;to stop it<br/>
+<b>ping 192.168.15.1<br/>
+<br/>
+</b><img src="image 3.png" /><b><br/>
+</b><b><br/>
+</b>ping something that is not in my network, and i dont get any reply back.<br/>
+<b>ping 192.168.16.1</b><br/>
+<img src="image 4.png" /><br/>
+<br/>
+<br/>
+show the ip address it talks to and the MAC-Address associated with with<br/>
+<b>arp -a<br/>
+</b><img src="image 5.png" /><br/>
+<br/>
+show the active connections that are running on your machine. In penetration testing this can be used to see if a machin is talking to somebody else.<br/>
+So you can know what that machine is associated with, and is it talking to something on a port.<br/>
+<b>netstat -ano<br/>
+<img src="image 6.png" /><br/>
+<br/>
+<br/>
+</b>print your routing table(tells you where your trafic exits)<b><br/>
+</b><b>route<br/>
+<img src="image 7.png" /><br/>
+<br/>
+</b>how can we understand this routing table?<br/>
+For this VM the traffic is exiting on 192.168.134.0 &nbsp;<br/>
+So traffic goes out of this 0.0.0.0 gateway in this range(192.168.134.0) <br/>
+So when it goest out fo this gateway, it'doing NAT(Network Address Translation) and it's running off my computer.<br/>
+<b><span style="font-family: sans"><br/>
+</span></b><span style="font-family: sans"><span style="color: #000000"><span style="font-size: 10pt">it's important to know route because there could be a machine that you're attacking that has multiple routes, so you might see a 134(</span></span></span>192.168.134.<span style="font-family: sans"><span style="color: #000000"><span style="font-size: 10pt">) and a 135(</span></span></span>192.168.135.<span style="font-family: sans"><span style="color: #000000"><span style="font-size: 10pt">) <br/>
+</span></span></span><span style="font-family: sans"><span style="color: #000000"><span style="font-size: 10pt">because it has two Nicks inside of it. So it's actually talking to a completely different network that you didn't know existed, so you might have been attacking one network.<br/>
+And the 134 range and then 135 just out there and this computer can talk to both. And until that point you had no idea. <br/>
+</span></span></span><span style="font-size: 10pt"><span style="font-family: sans"><span style="color: #000000">And that's the idea of called pivoting when you switch in network from one to the other, but you're using a machine.</span></span><b><br/>
+</b></span><b><span style="font-size: 10pt">&nbsp;</span><br/>
+</b></body></html>
