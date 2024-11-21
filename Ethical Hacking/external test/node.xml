@@ -2,15 +2,16 @@
 <node>
 <version>6</version>
 <dict>
-  <key>title</key><string>External Test</string>
+  <key>expanded</key><true/>
   <key>nodeid</key><string>c38208ea-bc30-4aff-862c-5f853d106af5</string>
   <key>modified_time</key><integer>1731842865</integer>
-  <key>version</key><integer>6</integer>
   <key>content_type</key><string>application/x-notebook-dir</string>
   <key>created_time</key><integer>1731842865</integer>
   <key>info_sort_dir</key><integer>1</integer>
+  <key>icon</key><string>folder-blue.png</string>
+  <key>title</key><string>External Test</string>
+  <key>version</key><integer>6</integer>
   <key>order</key><integer>2</integer>
   <key>info_sort</key><string>order</string>
-  <key>icon</key><string>folder-blue.png</string>
 </dict>
 </node>

@@ -2,14 +2,14 @@
 <node>
 <version>6</version>
 <dict>
-  <key>title</key><string>Brute-Force</string>
-  <key>nodeid</key><string>b3a6e003-028f-450f-8c09-e102ff9ea284</string>
-  <key>modified_time</key><integer>1731843062</integer>
+  <key>title</key><string>Vuln Scan</string>
+  <key>nodeid</key><string>2b292d8c-e816-459d-b12c-a8282438680e</string>
+  <key>modified_time</key><integer>1731843050</integer>
   <key>version</key><integer>6</integer>
   <key>content_type</key><string>text/xhtml+xml</string>
-  <key>created_time</key><integer>1731843062</integer>
+  <key>created_time</key><integer>1731843050</integer>
   <key>info_sort_dir</key><integer>1</integer>
-  <key>order</key><integer>9</integer>
+  <key>order</key><integer>1</integer>
   <key>info_sort</key><string>order</string>
 </dict>
 </node>
