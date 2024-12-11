@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>2 Word list mode</string>
+  <key>nodeid</key><string>e5e24b0e-71d9-43f0-a13e-91708a37ddd1</string>
+  <key>modified_time</key><integer>1733951868</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1733947051</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>

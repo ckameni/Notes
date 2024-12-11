@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2 Word list mode</title>
+</head><body><b><span style="font-size: 14pt">2 Word list mode<br/>
+<br/>
+</span></b><span style="font-size: 10pt">&gt; <b><span style="color: #0000ff">wordlists</span></b><br/>
+&gt; <b><span style="color: #0000ff">ls metasploit | nl</span></b><br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+exit the worlist<br/>
+&gt; pwd<br/>
+&gt; exit<br/>
+<br/>
+copy one worlist to the john directory<br/>
+&gt; <b><span style="color: #0000ff">cp /usr/share/wordlists/rockyou.txt .</span></b><br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+&gt; <b><span style="color: #0000ff">john --wordlist=rockyou.txt &nbsp;--format=raw-sha256 cars.txt</span></b><br/>
+<img src="image 3.png" /><br/>
+<br/>
+let's find a different file<br/>
+&gt; <b><span style="color: #0000ff">unshadow /etc/passwd /etc/shadow &gt; passshadow <br/>
+</span></b>&gt; <b><span style="color: #0000ff">cat passshadow<br/>
+</span></b><img src="image 4.png" /><br/>
+<br/>
+<span style="color: #0000ff"><b><br/>
+john --wordlist=rockyou.txt &nbsp;--format=raw-sha256 passshadow <br/>
+</b></span><img src="image 5.png" /><span style="color: #0000ff"><b><br/>
+</b></span><span style="color: #0000ff"><b><br/>
+</b></span></span><span style="font-size: 10pt">15:30: =&gt; </span><a href="https://www.youtube.com/watch?v=GAe_ypFbufQ">(38) How to Hack Passwords with John The Ripper - YouTube</a>&nbsp; <span style="font-size: 10pt"><br/>
+</span></body></html>
