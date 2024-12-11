@@ -2,7 +2,7 @@
 <node>
 <version>6</version>
 <dict>
-  <key>expanded</key><false/>
+  <key>expanded</key><true/>
   <key>title</key><string>Virtual Box</string>
   <key>nodeid</key><string>62ca4bde-c9dc-4222-810d-278871e673e5</string>
   <key>modified_time</key><integer>1731848650</integer>

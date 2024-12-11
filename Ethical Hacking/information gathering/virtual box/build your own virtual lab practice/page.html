@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Build your own Virtual Lab practice</title>
+</head><body>change kali password from kali to Administrator <br/>
+&gt; <b><span style="color: #0000ff">passwd</span></b>&nbsp;<br/>
+<br/>
+&nbsp;change root passwort( default root password is kali<br/>
+&gt; <b><span style="color: #0000ff">Sudo passwd root<br/>
+</span></b><b><span style="color: #0000ff"><br/>
+</span></b>update<b><span style="color: #0000ff">&nbsp;<br/>
+</span></b>&gt; <span style="color: #0000ff"><b>sudo apt update<br/>
+</b></span><span style="color: #0000ff"><b><br/>
+</b></span>upgrade <br/>
+&gt; &nbsp;<b><span style="color: #0000ff">sudo apt full-upgrade -y<br/>
+</span></b><b><span style="color: #0000ff"><br/>
+</span></b>remove librairies that are no longer needed<br/>
+&gt; <b><span style="color: #0000ff">sudo apt autoremove</span></b><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Log in into<br/>
+<br/>
+vm: metasploitable3<br/>
+Pass: vagrant<br/>
+<br/>
+&gt; ping 8.8.8.8<br/>
+&gt; ip a <br/>
+&gt; &nbsp; sudo shutdown -h now<br/>
+<br/>
+vm: meta2<br/>
+pass: msfadmin<br/>
+&gt; <br/>
+<br/>
+vm: kali-linux2024<br/>
+Pass: Administrator<br/>
+<br/>
+verifiy that we have an ip that is on<br/>
+&gt; ip a <br/>
+<img src="image.png" /><br/>
+<br/>
+do a scan to see what is on our network? <br/>
+&gt; <b><span style="color: #0000ff">sudo nmap -sn 10.10.0.6</span></b><br/>
+<img src="image 2.png" /><br/>
+<br/>
+perfom a complete scan of computers present on the network<br/>
+&gt; <b><span style="color: #0000ff">nmap -A 10.10.0.5-7</span></b><br/>
+<img src="image 3.png" /><br/>
+<br/>
+s<br/>
+&gt;</body></html>

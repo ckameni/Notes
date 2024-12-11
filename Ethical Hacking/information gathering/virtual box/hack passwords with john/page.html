@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hack Passwords with John</title>
+</head><body>&nbsp;Single Crack mode<br/>
+<br/>
+Incremental Crack mode<br/>
+<br/>
+External mode<br/>
+<br/>
+<br/>
+<br/>
+Script:<br/>
+# Tesla!:tesla1<br/>
+echo -n 'Tesla!:' &gt;&gt; cars.txt<br/>
+echo $(-n 'tesla1' | sha256sum | awk '{print $1}' ) &gt;&gt; cars.txt<br/>
+<br/>
+# BMW:BmW<br/>
+echo -n 'BMW:' &gt;&gt; cars.txt<br/>
+echo $(-n 'BmW' | sha256sum | awk '{print $1}' ) &gt;&gt; cars.txt<br/>
+<br/>
+# Kia:Kiaz<br/>
+echo -n 'Kia:' &gt;&gt; cars.txt<br/>
+echo $(-n 'Kiaz' | sha256sum | awk '{print $1}' ) &gt;&gt; cars.txt<br/>
+<br/>
+# Totota:toyo<br/>
+echo -n 'Totota:' &gt;&gt; cars.txt<br/>
+echo $(-n 'toyo' | sha256sum | awk '{print $1}' ) &gt;&gt; cars.txt</body></html>
