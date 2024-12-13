@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Festlegen der Speicheranforderungen</title>
+</head><body>Volle Power Apps und Power Automate‑Funktionen werden auf eigenständiger Basis lizenziert. Außerdem limitieren Power Apps und Power Automate <br/>
+Funktionen in verschiedenen Office 365 und Dynamics 365-Lizenzen – das bedeutet, dass Benutzer mit diesen Lizenzen bereits Zugriff auf Power Apps und Power Automate haben. <br/>
+Der <a href="https://go.microsoft.com/fwlink/?LinkId=2085130">Microsoft Power Apps und Power Automate-Lizenzierungsleitfaden</a>&nbsp;liefert weitere Details. &nbsp;<br/>
+<br/>
+<br/>
+<br/>
+Als Administrator müssen Sie keine eigenständige Power Apps‑ oder Power Automate-Lizenz zum Verwalten von Umgebungen haben.<br/>
+&nbsp;<br/>
+Einige Fragen zur Berücksichtigung bei der Planung Ihrer Pro-App‑ oder Pro-Benutzer-Kapazität:<ul><li>Ist eine Pro-Benutzer‑ oder Pro-App-Lizenz kostengünstiger?</li>
+<li>Welche Add-On-Kapazität benötige ich? Zum Beispiel Portalseitenaufrufe, AI Builder-Kredite.</li>
+<li>Wie viel Speicherkapazität brauche ich? Zum Beispiel für Datenbanken, Dateien und Protokolle. </li>
+</ul>
+<br/>
+Überprüfen Sie die Kapazitätsberechtigungen und -nutzung vom <a href="https://aka.ms/ppac/">Power Platform Admin Center</a>.<br/>
+&nbsp; <br/>
+<br/>
+<span style="font-size: 12pt"><b>Speicherverwaltung in Microsoft Dataverse<br/>
+</b></span><br/>
+Die <b>Microsoft Dataverse-Speicherkapazität</b>&nbsp;wird auf Mandantenebene geteilt und von allen Umgebungen und Workloads gemeinsam genutzt. Beim ersten Abonnement von <b>Power Apps</b>&nbsp;oder <b>Power Automate</b>&nbsp;wird dem Mandanten eine standardmäßige Kapazitätsberechtigung zugewiesen.<br/>
+<b><br/>
+</b><b>Standardkapazität und Zuweisung</b><ul><li>Ein <b>Power Apps Pro-Benutzer-Plan</b>&nbsp;bietet initial:</li>
+<li style="list-style-type: none"><ul><li><b>10 GB</b>&nbsp;für die Datenbank</li>
+<li><b>20 GB</b>&nbsp;für Dateien</li>
+<li><b>2 GB</b>&nbsp;für Protokolle</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Zusätzliche Kapazität</b>&nbsp;wird durch weitere lizenzierte Benutzer hinzugefügt, was die Gesamtkapazität des Mandanten erhöht.</li>
+<li><b>Kapazitäts-Add-Ons</b>&nbsp;können genutzt werden, um zusätzlichen Speicherplatz für Datenbanken, Dateien und Protokolle zu erwerben.</li>
+</ul>
+<b><br/>
+</b><b>Erstellung einer Dataverse-Datenbank</b><ul><li>Jede Umgebung kann <b>null oder eine Dataverse-Datenbank</b>&nbsp;enthalten, die den Speicherplatz für Apps bereitstellt.</li>
+<li>Zum Erstellen einer Datenbank muss mindestens <b>1 GB freier Datenbankkapazität</b>&nbsp;verfügbar sein.</li>
+<li>Der Speicher wird durch das Speichern von Daten, Dateien und Protokollen in Dataverse verbraucht.</li>
+</ul>
+<b><br/>
+</b><b>Überwachung und Erweiterung</b><ul><li>Als Administrator können Sie die <b>Speicherkapazität</b>&nbsp;und deren Nutzung im <b>Verwaltungsportal</b>&nbsp;überwachen.</li>
+<li>Standardmäßig umfasst das Abonnement eines Mandanten:</li>
+<li style="list-style-type: none"><ul><li><b>10 GB Datenbankspeicher</b>, wenn mindestens eine Instanz der Version 8.2 vorhanden ist.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Zusätzlicher Speicher</b>:</li>
+<li style="list-style-type: none"><ul><li>Für je 20 Vollbenutzer (z. B. Dynamics 365 for Sales-SLs) werden zusätzliche <b>5 GB</b>&nbsp;Datenbankspeicher bereitgestellt.</li>
+<li>Ein Kunde mit 20 Dynamics 365 for Sales-SLs erhält insgesamt <b>15 GB</b>&nbsp;Speicherplatz (10 GB Standard + 5 GB Zusatzspeicher).</li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>Technische Grenze und Add-Ons</b><ul><li>Die maximale Kapazität eines Mandanten beträgt <b>30 TB</b>.</li>
+<li>Das <b>Add-On „Database Additional Storage“</b>&nbsp;ermöglicht eine flexible Speichererweiterung in Schritten von <b>1 GB</b>&nbsp;pro Lizenz bis zur Obergrenze von <b>30 TB</b>.</li>
+</ul>
+<b><br/>
+</b><b>Wichtige Hinweise</b><ul><li>Der gesamte Speicherplatz wird über alle Instanzen des Mandanten geteilt und überwacht.</li>
+<li>Zusätzliche Kapazität ist besonders bei steigenden Benutzerzahlen oder großen Datenmengen essenziell.</li>
+</ul>
+<br/>
+Diese Informationen helfen Ihnen, die Speicheranforderungen effizient zu planen und eine optimale Nutzung der verfügbaren Kapazitäten sicherzustellen.<br/>
+&nbsp; </body></html>

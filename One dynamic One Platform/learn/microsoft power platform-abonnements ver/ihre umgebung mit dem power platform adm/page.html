@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ihre Umgebung mit dem Power Platform Admin Center verwalten</title>
+</head><body><br/>
+<b>Verwaltungsmodus in Microsoft Power Platform</b><br/>
+Der Verwaltungsmodus ist ein hilfreiches Tool, um administrative Änderungen an einer Umgebung durchzuführen, ohne die Arbeit von Endbenutzern zu beeinträchtigen. <br/>
+Diese Funktion steht für <b>Sandbox-, Produktions- oder Testumgebungen (abonnementbasiert)</b>&nbsp;zur Verfügung.<br/>
+<hr/><b>Hauptfunktionen und Nutzen</b><br/>
+<ul><li><b>Zugriffsbegrenzung:</b></li>
+<li style="list-style-type: none"><ul><li>Nur Benutzer mit den Sicherheitsrollen <b>Systemadministrator</b>&nbsp;oder <b>Systemanpasser</b>&nbsp;können sich anmelden.</li>
+<li>Ideal, um betriebliche Änderungen vorzunehmen, ohne dass Endbenutzer gestört werden.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Verarbeitung von Hintergrundprozessen:</b></li>
+<li style="list-style-type: none"><ul><li>Prozesse wie Plug-Ins oder benutzerdefinierte Workflow-Assemblys werden weiterhin ausgeführt, wenn der Verwaltungsmodus aktiviert ist, auch wenn <b>Hintergrundvorgänge deaktiviert</b>&nbsp;sind.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Anmeldung für Systemanpasser:</b></li>
+<li style="list-style-type: none"><ul><li>Systemanpasser müssen sich direkt über die <b>URL</b>&nbsp;anmelden, da die Umgebung im Verwaltungsmodus nicht im <b>Power Platform Admin Center</b>&nbsp;angezeigt wird.</li>
+</ul>
+</li>
+</ul>
+<hr/><b>Einstellungsoptionen im VerwaltungsmodusEinstellungBeschreibungVerwaltungsmodus</b>Aktiviert den Verwaltungsmodus für die ausgewählte Umgebung. <br/>
+Nur <b>Systemadministratoren</b>&nbsp;oder <b>Systemanpasser</b>&nbsp;haben Zugriff.<b>Hintergrundvorgänge</b>Optional: Deaktiviert alle <b>asynchronen Vorgänge</b>, z. B. Workflows, <br/>
+Exchange-Synchronisierung und E-Mail-Versand. Voraussetzung: Der Verwaltungsmodus muss aktiviert sein.<b>Benutzerdefinierte Nachricht</b>Optional: Anzeige <br/>
+einer individuellen Nachricht an alle Benutzer, die sich anmelden möchten.<hr/><b><br/>
+</b><b>Wichtige Hinweise</b><ul><li>Der Verwaltungsmodus ist besonders nützlich für Umgebungen, in denen Sie kritische Änderungen vornehmen oder Tests durchführen möchten.</li>
+<li><b>Eingeschränkte Sichtbarkeit:</b>&nbsp;Für Systemanpasser wird die Umgebung nicht im Admin Center angezeigt, sondern erfordert direkten URL-Zugriff.</li>
+<li><b>Hintergrundprozesse deaktivieren:</b>&nbsp;Diese Option verhindert unnötige Aktivitäten wie E-Mail-Synchronisierung, was hilfreich ist, um Ressourcen zu schonen und Fehler während der Änderungen zu vermeiden.</li>
+</ul>
+<hr/><b>Empfohlene Vorgehensweise</b><ul><li>Aktivieren Sie den Verwaltungsmodus, wenn Sie umfangreiche Änderungen vornehmen müssen.</li>
+<li>Informieren Sie Benutzer im Voraus über mögliche Einschränkungen, idealerweise über die <b>benutzerdefinierte Nachricht</b>.</li>
+<li>Stellen Sie sicher, dass alle geplanten Hintergrundvorgänge abgeschlossen sind, bevor Sie diese deaktivieren.</li>
+<li>Testen Sie Änderungen gründlich in einer <b>Sandboxumgebung</b>, bevor Sie sie auf Produktionsumgebungen anwenden.</li>
+</ul>
+&nbsp; </body></html>

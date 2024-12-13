@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ihrem Abonnement eine Umgebung hinzufügen</title>
+</head><body><b>Umgebungen hinzufügen</b><br/>
+Umgebungen sind wie Container, die es Administratoren ermöglichen, Daten, Apps, Flows und Verbindungen zu verwalten und Berechtigungen für die <br/>
+Nutzung dieser Ressourcen zu vergeben. Sie können mehreren Umgebungen in einem Mandanten hinzufügen.<br/>
+<br/>
+Jede Umgebung wird unter einem Microsoft Entra ID-Mandanten erstellt, sodass nur Benutzer dieses Mandanten auf die Umgebung zugreifen können. <br/>
+Eine Umgebung ist auch an einen Standort geografisch gebunden (z. B. USA), und Apps, die dort erstellt werden, werden in Rechenzentren in diesem <br/>
+Gebiet gespeichert.<br/>
+<br/>
+Umgebungen können keine oder eine Microsoft Dataverse-Datenbank enthalten, die Speicherplatz für Apps und Chatbots bietet. Ob eine Datenbank erstellt <br/>
+werden kann, hängt von der Lizenz(erworben für Power Apps) und ihrer Berechtigungen in dieser Umgebung ab &nbsp;.<br/>
+<br/>
+Wenn Sie eine App in einer Umgebung erstellen, kann sie nur mit Datenquellen innerhalb derselben Umgebung verbunden werden. <br/>
+Zum Beispiel kann eine App in der Testumgebung nur auf die Testdatenbank zugreifen, nicht auf die Datenbank der Entwicklungsumgebung.<br/>
+<b><br/>
+</b><b>Rollen innerhalb einer Umgebung</b><br/>
+Es gibt zwei Hauptrollen in Umgebungen:<br/>
+<br/>
+<ul><li><b>Umgebungsadministrator</b>: Diese Rolle hat volle Verwaltungsrechte in einer Umgebung. </li>
+<li style="list-style-type: none"><ul><li>Sie kann Benutzerrollen zuweisen oder entziehen( z.B. <b>Umgebungsadministrators</b>&nbsp;oder <b>Umgebungserstellers</b>&nbsp;),</li>
+<li>eine Dataverse-Datenbank für die Ugebung bereitstellen, </li>
+<li>alle Ressourcen in der Umgebung verwalten und </li>
+<li>Richtlinien zum Schutz vor Datenverlust festlegen.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Umgebungsersteller</b>: Diese Rolle kann Ressourcen in einer Umgebung erstellen, wie Apps, Verbindungen, Gateways und Power Automate Flows.</li>
+</ul>
+<br/>
+<br/>
+<b>Eine neue Umgebung erstellen</b><br/>
+Im Power Platform Admin Center (PPAC) gibt es das Konzept von <b>Templates</b>. Templates dienen nur der Effizienz und sind optional. Ohne ein Template <br/>
+könntest du Dataverse bereitstellen, Dynamics aktivieren und die Umgebung Schritt für Schritt von Grund auf aufbauen, ohne vorinstallierte Apps.<br/>
+<br/>
+Das bedeutet, du könntest beispielsweise Finance and Operations (F&amp;O), Sales oder Customer Service manuell installieren und konfigurieren. Allerdings dauert dieser Prozess länger.<br/>
+<br/>
+Der Zweck eines Templates ist es, dir Zeit zu sparen: Microsoft hat viele der häufig genutzten Funktionen und Apps so vorkonfiguriert, dass sie gemeinsam <br/>
+verwendet werden können. Mit einem Template kannst du diese vorgefertigte Umgebung schnell und einfach einrichten.<br/>
+&nbsp; <br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+<br/>
+<b>F&amp;O-Lizenzen und Anwendungen</b><br/>
+Microsoft verkauft keine einheitliche Finance and Operations (F&amp;O)-Lizenz mehr. Stattdessen wurden die Lizenzen in spezifische Bereiche aufgeteilt, <br/>
+wie <b>Finance</b>, <b>Supply Chain</b>, <b>Commerce</b>&nbsp;und weitere.<br/>
+<br/>
+Trotz dieser unterschiedlichen Lizenzmodelle wird in allen Fällen dieselbe F&amp;O-Anwendung installiert. Die Trennung der Lizenzen dient dazu, <br/>
+Kunden flexibler auf ihre individuellen Bedürfnisse einzugehen.<br/>
+<br/>
+<b>Templates für spezifische Lizenzen und Anwendungen</b><ul><li><b>Finance-Kunden</b>:</li>
+<li style="list-style-type: none">Wenn du eine Finance-Lizenz hast, steht dir ein <b>Finance-Template</b>&nbsp;zur Verfügung. Dieses enthält <b>Dataverse</b>, auf dem die F&amp;O-Anwendung installiert wird. </li>
+<li style="list-style-type: none">Zusätzlich könnten Funktionen wie <b>Copilot für Finance</b>&nbsp;oder <b>Financial Reporting</b>&nbsp;integriert sein, mit denen du z. B. Einkommensübersichten oder Bilanzen </li>
+<li style="list-style-type: none">erstellen kannst. Dieses Template ist speziell auf die Bedürfnisse von Finance-Kunden zugeschnitten.</li>
+<li style="list-style-type: none"><img src="image 2.png" /></li>
+</ul>
+<ul><li><b>Supply Chain Management (SCM)-Kunden</b>:</li>
+<li style="list-style-type: none">Für SCM-Kunden gibt es das <b>Supply Chain Management-Template</b>. Auch hier sind <b>Dataverse</b>&nbsp;und die F&amp;O-Anwendung enthalten. Darüber hinaus könnten </li>
+<li style="list-style-type: none">Funktionen wie der <b>Copilot für SCM</b>&nbsp;oder das <b>Inventory Visibility Add-In</b>&nbsp;vorinstalliert sein, um spezifische Anforderungen im Bereich der Lieferkettenverwaltung zu unterstützen.</li>
+<li style="list-style-type: none"><img src="image 3.png" /></li>
+<li style="list-style-type: none"></li>
+</ul>
+<b>Flexibilität bei der Nutzung</b>:<br/>
+Nach der Erstellung der Umgebung kann ein Finance-Kunde beispielsweise Funktionen wie den Copilot für SCM installieren – und umgekehrt. <br/>
+Die Templates dienen lediglich der Effizienz und schnellen Einrichtung. Es gibt keine Einschränkungen, die verhindern, dass verschiedene Anwendungen <br/>
+über Lizenzen hinweg kombiniert werden.<br/>
+&nbsp; <br/>
+<br/>
+&nbsp; </body></html>

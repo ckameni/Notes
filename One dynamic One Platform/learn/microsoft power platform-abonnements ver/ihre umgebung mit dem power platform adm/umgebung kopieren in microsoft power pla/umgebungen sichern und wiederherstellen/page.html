@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Umgebungen sichern und wiederherstellen</title>
+</head><body><b><a href="Umgebungen sichern und wiederherstellen.">Sicherung und Wiederherstellung von Umgebungen in Dynamics 365<br/>
+</a></b><br/>
+Der Schutz der Daten in Dynamics 365-Kundenbindungs-Apps ist entscheidend für die <b>Sicherheit</b>&nbsp;und die <b>Verfügbarkeit</b>&nbsp;der Dienste. <br/>
+Hier sind die Optionen und Überlegungen zu <b>Sicherungen</b>&nbsp;und <b>Wiederherstellungen</b>:<br/>
+<hr/><b>1. Systemsicherungen<br/>
+</b><br/>
+<b>Eigenschaften:</b><br/>
+<ul><li>Systemsicherungen erfolgen <b>automatisch</b>&nbsp;ohne Benutzereingriff.</li>
+<li><b>Aufbewahrungszeitraum:</b></li>
+<li style="list-style-type: none"><ul><li>Mit aktivierten Dynamics 365-Apps: <b>28 Tage</b>.</li>
+<li>Ohne aktivierte Dynamics 365-Apps: <b>7 Tage</b>.</li>
+<li>Anpassungen des Zeitraums (7, 14, 21, 28 Tage) sind mit PowerShell möglich.</li>
+</ul>
+</li>
+<li>Systemsicherungen nutzen die <b>Microsoft Azure SQL-Datenbanktechnologie</b>.</li>
+</ul>
+<br/>
+<b>Wichtige Überlegungen:</b><br/>
+<ul><li><b>Dauer:</b>&nbsp;Kopier- und Wiederherstellungsvorgänge können je nach Datenmenge bis zu <b>24 Stunden</b>&nbsp;dauern.</li>
+<li><b>Ausnahmen:</b>&nbsp;Testumgebungen (Standard und abonnementbasiert) werden nicht gesichert.</li>
+<li><b>Regionale Bindung:</b>&nbsp;Wiederherstellungen müssen in derselben Region erfolgen, in der die Sicherung durchgeführt wurde.</li>
+<li><b>Überwachungsprotokolle:</b>&nbsp;Bei Wiederherstellungen in derselben Umgebung bleiben Überwachungsprotokolle erhalten.</li>
+<li><b>Teilnahme an Sicherungen:</b>&nbsp;Nur <b>Power Apps</b>&nbsp;und <b>Microsoft Power Automate-Flows</b>, die Teil einer <b>Dataverse-Lösung</b>&nbsp;sind, werden gesichert.</li>
+</ul>
+<hr/><b>2. Manuelle Sicherungen<br/>
+</b><br/>
+<b>Einsatzmöglichkeiten:</b><br/>
+<ul><li>Vor wesentlichen Anpassungsänderungen.</li>
+<li>Vor Versionsaktualisierungen.</li>
+</ul>
+<br/>
+<b>Eigenschaften:</b><br/>
+<ul><li><b>Automatische Sicherung bei Updates:</b>&nbsp;Microsoft erstellt eine Sicherung vor Umgebungsversionen.</li>
+<li><b>Verfügbare Umgebungen:</b>&nbsp;Produktions- und Sandbox-Umgebungen können gesichert werden. Standardumgebungen nicht.</li>
+<li><b>Aufbewahrungszeitraum:</b>&nbsp;Entspricht dem der Systemsicherungen (bis zu 28 Tage).</li>
+<li><b>Speicherlimits:</b>&nbsp;Manuelle Sicherungen zählen nicht zu den Speicherlimits.</li>
+<li><b>Unbegrenzte Anzahl:</b>&nbsp;Es gibt keine Begrenzung für die Anzahl der manuellen Sicherungen.</li>
+<li><b>Regionale Bindung:</b>&nbsp;Wiederherstellungen müssen in der ursprünglichen Region erfolgen.</li>
+</ul>
+<hr/><b>3. Wiederherstellung von Sicherungen<br/>
+</b><ul><li><b>Sandboxumgebungen:</b>&nbsp;Wiederherstellungen können direkt durchgeführt werden.</li>
+<li><b>Produktionsumgebungen:</b></li>
+<li style="list-style-type: none"><ul><li>Zunächst in eine Sandboxumgebung wiederherstellen.</li>
+<li>Anschließend von der Sandboxumgebung in die Produktionsumgebung wechseln.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<b>Wichtige Hinweise:</b><br/>
+<ul><li>Die Zielumgebung muss im gleichen geografischen Bereich wie die Quellumgebung liegen.</li>
+<li>Überwachungsprotokolle und externe Abhängigkeiten sollten geprüft werden.</li>
+</ul>
+<hr/><b>Zusammenfassung der Optionen<br/>
+<br/>
+Option &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Eigenschaften &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | <br/>
+-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|<br/>
+</b><b>Systemsicherungen &nbsp; &nbsp; &nbsp;| </b>Automatisch, kontinuierlich, keine Benutzeraktion erforderlich.&#09;&#09;&#09;&#09; &nbsp; &nbsp; &nbsp;<b>|</b><br/>
+<b>Manuelle Sicherungen | </b>Benutzerinitiiert, nützlich vor Änderungen oder Updates.&#09;&#09;&#09;&#09;&#09;&#09; &nbsp; &nbsp; &nbsp;<b>|</b><br/>
+<b>Wiederherstellung &nbsp; &nbsp; &nbsp; &nbsp;| </b>Direkt in Sandboxumgebungen oder indirekt über Sandbox- zu Produktionsumgebungen.<b>|<br/>
+</b><br/>
+Weitere Informationen finden Sie unter <b><a href="https://learn.microsoft.com/de-de/power-platform/admin/switch-environment/">Umgebungstyp ändern</a></b>, um Wiederherstellungen von Sandbox- zu Produktionsumgebungen zu verwalten.<br/>
+<br/>
+<br/>
+&nbsp; </body></html>

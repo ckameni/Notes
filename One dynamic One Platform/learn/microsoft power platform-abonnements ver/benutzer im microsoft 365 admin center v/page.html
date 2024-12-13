@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Benutzer im Microsoft 365 Admin Center verwalten</title>
+</head><body><br/>
+<br/>
+<br/>
+<br/>
+<b>Mehrere Benutzer hinzufügen </b><br/>
+Sie können schnell und einfach mehrere Benutzer ohne das Formular mit den vier Registerkarten hinzufügen, indem Sie <b>Users</b>&gt;<b>Active users</b>&gt;<b>Add multiple users</b>&nbsp;auswählen.<br/>
+&nbsp; <br/>
+<br/>
+<b>Vorhandene Benutzer verwalten </b><br/>
+Die Verwaltung der Rollen und Lizenzen Ihrer aktuellen Benutzer erfolgt einfach über das Verzeichnis <b>Active users</b>. Es enthält ein Suchfeld und Filtersteuerelemente, mit denen sich die Benutzer schnell sortieren lassen.<br/>
+<br/>
+Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/office365/admin/add-users/add-users/">Benutzer hinzufügen und Lizenzen zuweisen</a>&nbsp;in Microsoft 365.<br/>
+&nbsp;<br/>
+Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/power-platform/admin/grant-users-access">Benutzern Zugriff gewähren</a>.<br/>
+&nbsp; <br/>
+<br/>
+<b>Wichtiger Hinweis zur Benutzererstellung und Lizenzzuweisung</b><br/>
+Wenn Sie im <b>Microsoft 365 Admin Center</b>&nbsp;einen neuen Benutzer erstellen und ihm eine Lizenz zuweisen, beachten Sie die folgenden Punkte:<br/>
+<br/>
+<b>Synchronisation mit Kundenbindungsanwendungen</b><ul><li>Der Benutzer wird automatisch auch in <b>Kundenbindungsanwendungen</b>&nbsp;(z. B. Dynamics 365) erstellt.</li>
+<li><b>Synchronisationszeit:</b>&nbsp;Der Abgleich zwischen dem Microsoft 365 Admin Center und den Kundenbindungsanwendungen kann einige Minuten in Anspruch nehmen.</li>
+</ul>
+<b><br/>
+<br/>
+</b><b>Zugriffsrechte des Benutzers</b><ul><li>Mit der <b>Benutzer-ID</b>&nbsp;und dem <b>Kennwort</b>&nbsp;kann der Benutzer:</li>
+<li style="list-style-type: none"><ul><li><b>Zugriff auf das Microsoft 365 Admin Center</b>&nbsp;erhalten, um allgemeine Informationen zu Diensten anzuzeigen.</li>
+</ul>
+</li>
+<li>Der Benutzer hat jedoch <b>keinen Zugriff auf Kundenbindungsanwendungen</b>, bis:</li>
+<li style="list-style-type: none"><ul><li>Ihm <b>direkt oder über eine Gruppe</b>&nbsp;eine <b>Sicherheitsrolle</b>&nbsp;zugewiesen wurde.</li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>Zusammengefasst:</b><ul><li>Erstellen und Lizenzieren eines Benutzers allein reicht nicht aus, um Zugriff auf Anwendungen wie Dynamics 365 zu gewähren.</li>
+<li>Stellen Sie sicher, dass der Benutzer eine passende <b>Sicherheitsrolle</b>&nbsp;erhält, um die gewünschten Funktionen nutzen zu können.</li>
+</ul>
+&nbsp;<br/>
+<span style="font-size: 12pt"><b>Überblick: Microsoft 365-Administratorrollen</b></span><br/>
+Microsoft 365 bietet eine Vielzahl von Administratorrollen, die auf bestimmte Geschäfts- und Verwaltungsfunktionen abgestimmt sind. Jede Rolle gewährt spezifische Berechtigungen <br/>
+im <b>Microsoft 365 Admin Center</b>. Im Folgenden werden die wichtigsten Rollen beschrieben, die sich besonders auf <b>Microsoft Dynamics 365</b>&nbsp;und <b>Power Platform</b>&nbsp;beziehen.<br/>
+<br/>
+<b>1. Globaler Administrator</b><ul><li><b>Funktion:</b>&nbsp;Hat Zugriff auf alle administrativen Funktionen in der Microsoft 365-Suite (einschließlich Skype for Business).</li>
+<li><b>Besonderheiten:</b></li>
+<li style="list-style-type: none"><ul><li>Kann andere Administratorrollen zuweisen und verwalten.</li>
+<li>Diese Rolle hat die höchsten Berechtigungen und sollte sparsam vergeben werden (2 bis 4 Personen pro Organisation).</li>
+<li>Für <b>Power Platform-Entwickler</b>&nbsp;ist es oft besser, die Rolle <b>Power Platform-Administrator</b>&nbsp;zu verwenden.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<b>2. Power Platform-Administrator</b><ul><li><b>Funktion:</b></li>
+<li style="list-style-type: none"><ul><li>Kann mehrere Umgebungen in der Power Platform verwalten.</li>
+<li>Umfasst <b>Systemadministratorrechte</b>&nbsp;für Power Platform.</li>
+</ul>
+</li>
+<li><b>Empfohlen für:</b>&nbsp;Power Platform-spezifische Verwaltungsaufgaben ohne Zugriff auf globale Einstellungen.</li>
+</ul>
+<b><br/>
+</b><b>3. Abrechnungsadministrator</b><ul><li><b>Funktion:</b></li>
+<li style="list-style-type: none"><ul><li>Verwalten von Käufen und Abonnements.</li>
+<li>Erstellen von Supporttickets und Überwachen des Dienststatus.</li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>4. Benutzeradministrator</b><ul><li><b>Funktion:</b></li>
+<li style="list-style-type: none"><ul><li>Verwaltung von Benutzerkonten (z. B. Zurücksetzen von Kennwörtern, Hinzufügen oder Löschen von Benutzern).</li>
+<li>Verwaltung von Supporttickets und Microsoft 365-Gruppen.</li>
+</ul>
+</li>
+<li><b>Einschränkungen:</b></li>
+<li style="list-style-type: none"><ul><li>Kann keine globalen Administratoren löschen oder verwalten.</li>
+<li>Kann keine Kennwörter für Administratoren mit höheren Berechtigungen (z. B. Abrechnungs-, Exchange-, oder Compliance-Administratoren) zurücksetzen.</li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>5. Dynamics 365-Administrator</b><ul><li><b>Funktion:</b></li>
+<li style="list-style-type: none"><ul><li>Verwaltung von Dynamics 365-Instanzen und Mandantenebenen-Funktionen.</li>
+<li>Administratorrechte in der Power Platform.</li>
+</ul>
+</li>
+<li><b>Einschränkungen:</b></li>
+<li style="list-style-type: none"><ul><li>Kein Zugriff auf globale Microsoft 365-Administratoraufgaben (z. B. Benutzerkonten- oder Abonnementverwaltung).</li>
+<li>Kein Zugriff auf Einstellungen für Microsoft 365-Apps wie Exchange oder SharePoint.</li>
+</ul>
+</li>
+</ul>
+<hr/><b>Zusammenfassung der Rollenauswahl</b><ul><li><b>Globaler Administrator:</b>&nbsp;Für umfassende Kontrolle über die gesamte Microsoft 365-Umgebung (nur wenigen Personen zuweisen).</li>
+<li><b>Power Platform-Administrator:</b>&nbsp;Speziell für die Verwaltung der Power Platform.</li>
+<li><b>Dynamics 365-Administrator:</b>&nbsp;Ideal für die Verwaltung von Dynamics 365, ohne globale Berechtigungen zu vergeben.</li>
+<li><b>Abrechnungs- und Benutzeradministratoren:</b>&nbsp;Für spezifische Aufgaben wie Abonnementverwaltung oder Benutzerkontenpflege.</li>
+</ul>
+<br/>
+Mit dieser klaren Rollenverteilung können Sie sicherstellen, dass jede Person die benötigten Berechtigungen hat, ohne unnötige Risiken einzugehen.<br/>
+<br/>
+Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/azure/active-directory/users-groups-roles/directory-assign-admin-roles">Berechtigungen der Administratorrolle</a>&nbsp;in Microsoft Entra ID. &nbsp;<br/>
+Organisationen, die eine Vielzahl von Benutzern effizient erstellen, konfigurieren und verwalten möchten, können dies in <a href="https://learn.microsoft.com/de-de/office365/enterprise/powershell/manage-office-365-with-office-365-powershell">PowerShell Microsoft 365</a>&nbsp;schnell erledigen. &nbsp;<br/>
+<br/>
+&nbsp; </body></html>

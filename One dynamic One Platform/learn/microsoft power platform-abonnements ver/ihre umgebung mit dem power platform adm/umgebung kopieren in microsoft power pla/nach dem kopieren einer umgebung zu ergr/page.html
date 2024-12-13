@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nach dem Kopieren einer Umgebung zu ergreifende Schritte</title>
+</head><body><b>Nach dem Kopieren einer Umgebung zu ergreifende Schritte</b><br/>
+Um sicherzustellen, dass die <b>Zielumgebung</b>&nbsp;(neu erstellte Kopie) die ursprüngliche Umgebung nicht beeinträchtigt, sind folgende Schritte notwendig:<br/>
+<hr/><b>1. Verwaltungsmodus und Hintergrundvorgänge</b><br/>
+<ul><li><b>Verwaltungsmodus:</b></li>
+<li style="list-style-type: none"><ul><li>Nach dem Kopieren wird die Zielumgebung automatisch in den <b>Verwaltungsmodus</b>&nbsp;versetzt.</li>
+<li>Nur Benutzer mit der <b>Systemadministratorrolle</b>&nbsp;können sich anmelden und die Umgebung verwalten.</li>
+<li>Normale Benutzer haben keinen Zugriff.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Deaktivierte Hintergrundvorgänge:</b></li>
+<li style="list-style-type: none"><ul><li>Workflows und Synchronisierungen mit Exchange werden deaktiviert, um unbeabsichtigte Aktionen zu verhindern.</li>
+</ul>
+</li>
+</ul>
+<hr/><b>2. Überprüfung von Komponenten</b><br/>
+Führen Sie eine gründliche Überprüfung aller Anwendungskomponenten in der Zielumgebung durch, insbesondere bei externen Verbindungen. <br/>
+Abhängig von der Komponente sollten Sie eine der folgenden Maßnahmen ergreifen:<br/>
+<ul><li><b>Deaktivieren:</b>&nbsp;Schalten Sie die Komponente aus, um Konflikte zu vermeiden.</li>
+<li><b>Umleiten:</b>&nbsp;Die Komponente in eine andere Dienstumgebung umleiten, beispielsweise eine Instanz, in der Exchange oder SharePoint ausgeführt wird &nbsp;</li>
+<li><b>Beibehalten:</b>&nbsp;Belassen Sie die Komponente wie in der Kopierumgebung. z.B: Veröffentlichungen von Yammer in der Kopier‑ und der Produktionsumgebung zulassen. &nbsp;</li>
+</ul>
+<hr/><b>3. Spezifische externe Verbindungen<br/>
+<br/>
+</b><b>E-Mail</b><ul><li>Ein Postfach kann nicht mit zwei Umgebungen synchronisiert werden.</li>
+<li>In der Zielumgebung sollten Benutzerpostfächer <b>deaktiviert</b>&nbsp;werden, um zu verhindern, dass E-Mails gesendet/empfangen oder Termine, Kontakte und Aufgaben synchronisiert werden.</li>
+<li>Setzen Sie die Synchronisierung für <b>eingehende E-Mails, ausgehende E-Mails, Termine, Kontakte und Aufgaben</b>&nbsp;auf <b>Keine</b>.</li>
+</ul>
+<b><br/>
+</b><b>SharePoint</b><ul><li>Deaktivieren oder leiten Sie die Verbindung zu einer <b>SharePoint-Sandbox-Umgebung</b>&nbsp;um.</li>
+<li>In Dynamics 365:</li>
+<li style="list-style-type: none"><ul><li>Navigieren Sie zu <b>Einstellungen &gt; Dokumentationsverwaltung &gt; SharePoint &gt; Websites</b>.</li>
+<li>Wählen Sie die Website aus und klicken Sie auf <b>Deaktivieren</b>.</li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>Yammer</b><ul><li>Deaktivieren Sie Yammer oder richten Sie eine Umleitung zu einem separaten Yammer-Dienst ein, um Konflikte zwischen Beiträgen aus der Kopier- und Produktionsumgebung zu vermeiden.</li>
+<li>In Dynamics 365:</li>
+<li style="list-style-type: none"><ul><li>Navigieren Sie zu <b>Einstellungen &gt; Verwaltung &gt; Yammer-Konfiguration</b>.</li>
+</ul>
+</li>
+</ul>
+<hr/><b>4. Plattform- und Client-Erweiterbarkeit<br/>
+<br/>
+</b><b>Plattform-Erweiterbarkeit</b><ul><li>Deaktivieren Sie folgende Elemente, die externe Dienste beeinflussen könnten:</li>
+<li style="list-style-type: none"><ul><li><b>Serverseitige Plug-Ins</b></li>
+<li><b>Benutzerdefinierte Workflowaktivitäten</b></li>
+</ul>
+</li>
+</ul>
+<b><br/>
+</b><b>Client-Erweiterbarkeit</b><ul><li><b>JavaScript/HTML-Webressourcen:</b>&nbsp;Überprüfen Sie, ob diese Lese-/Schreibvorgänge ausführen, die externe Dienste betreffen.</li>
+<li><b>IFRAMES:</b>&nbsp;Stellen Sie sicher, dass das Ziel der IFRAMES keine Produktionsumgebung ist.</li>
+</ul>
+<hr/><b>5. Weitere Überprüfungen<br/>
+</b><ul><li><b>Dataverse-Suche:</b>&nbsp;Stellen Sie sicher, dass Suchanfragen die erwarteten Ergebnisse liefern.</li>
+</ul>
+<ul><li><b>Flows:</b></li>
+<li style="list-style-type: none"><ul><li>Lösungsflows werden deaktiviert kopiert, während Nichtlösungsflows erhalten bleiben.</li>
+<li>Überprüfen und aktivieren/deaktivieren Sie Flows bei Bedarf.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Verbindungsreferenzen:</b></li>
+<li style="list-style-type: none"><ul><li>Erstellen Sie neue Verbindungen und setzen Sie diese in den Verbindungsreferenzen.</li>
+</ul>
+</li>
+</ul>
+<ul><li><b>Benutzerdefinierte Konnektoren:</b></li>
+<li style="list-style-type: none"><ul><li>Überprüfen Sie Konnektoren und installieren Sie sie bei Bedarf neu.</li>
+</ul>
+</li>
+</ul>
+<hr/>Durch diese Maßnahmen wird sichergestellt, dass die Zielumgebung sicher und unabhängig von der Produktionsumgebung funktioniert.<br/>
+&nbsp; </body></html>

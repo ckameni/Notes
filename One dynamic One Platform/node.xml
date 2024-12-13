@@ -13,17 +13,17 @@
       </array>
     </dict>
   </array>
-  <key>expanded</key><false/>
-  <key>nodeid</key><string>c58eca83-d24e-464c-998e-484a350c6d7f</string>
-  <key>modified_time</key><integer>1731842800</integer>
+  <key>expanded</key><true/>
+  <key>nodeid</key><string>1119c931-d67b-457c-94e3-4c25f19622d6</string>
+  <key>modified_time</key><integer>1734048218</integer>
   <key>content_type</key><string>application/x-notebook-dir</string>
-  <key>created_time</key><integer>1731842800</integer>
+  <key>created_time</key><integer>1734048218</integer>
   <key>info_sort_dir</key><integer>1</integer>
-  <key>title</key><string>Ethical Hacking</string>
+  <key>title</key><string>One dynamic One Platform</string>
   <key>column_widths</key><dict>
     <key>created_time</key><integer>150</integer>
-    <key>modified_time</key><integer>1351</integer>
-    <key>title</key><integer>208</integer>
+    <key>modified_time</key><integer>1034</integer>
+    <key>title</key><integer>442</integer>
   </dict>
   <key>attr_defs</key><array>
     <dict>

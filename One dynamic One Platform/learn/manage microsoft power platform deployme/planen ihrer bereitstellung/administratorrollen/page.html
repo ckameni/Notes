@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Administratorrollen</title>
+</head><body><br/>
+<b>Administratorrollen</b><br/>
+Es gibt verschiedene Administratorrollen, die Benutzern zugewiesen werden können, um Abonnementverwaltungsaktivitäten z.B. Abrechnungsverwaltung, Kennwortverwaltung und Benutzerverwaltung zu übernehmen.<br/>
+Aus einer Power Platform-Perspektive gibt es zwei Microsoft Power Platform–bezogene Serviceadministratorrollen, die Sie zuweisen können, um ein hohes Maß an <b>Administratorverwaltung</b>&nbsp;bereitzustellen: &nbsp;<br/>
+<ul><li><b>Dynamics 365-Administrator: </b>mit dieser Role lässt sich fast alles machen</li>
+<li style="list-style-type: none"><ul><li>Trial, &nbsp;Sandbox, Prod Umgebungen verwalten; </li>
+<li>FNO and andere Dynamics apps in den Umgebungen installieren</li>
+<li>Einstellungen der Umgebungeb in Dataverse managen</li>
+<li>Umgebungsgruppen verwalten</li>
+</ul>
+</li>
+<li><b>Microsoft Power Platform-Administrator: </b>Die Role kann das gleiche wie <b>Dynamics 365-Administrator</b>&nbsp;und daneben noch mehr Sachen</li>
+<li style="list-style-type: none"><ul><li>Dev und &nbsp;Teams Umgebungen managen</li>
+<li>Umgebungseinstellungen verwalten</li>
+<li>Governance und billing policies</li>
+</ul>
+</li>
+</ul>
+<br/>
+Um die Verwaltung von Umgebungen und Einstellungen zu erleichtern, können Sie Benutzern die Rolle des <b>Microsoft Power Platform-Administrators</b>&nbsp;zuweisen. <br/>
+Diese Rolle ermöglicht es, die Microsoft Power Platform auf Mandantenebene zu verwalten. <br/>
+<br/>
+Die Zuweisung dieser Administratorrolle erfolgt über das <b>Microsoft 365 Admin Center</b>. &nbsp;<br/>
+<br/>
+Der global admin kann natürlich auch direkt im PPAC alle Aufgaben erledingen aber in der Regel gelegiert dieser bestimmte Berechtigungen wie z.B:<br/>
+- Office 365 an dem <b>exchange administrator</b><br/>
+- Teams an einem <b>teams administrator</b><br/>
+- Powerplatform Adiministration an einem <b>Powerplatform Adiministrator. &nbsp;</b>Diese Role wird auch <span style="color: #ff0000">Partner</span>&nbsp;zugewiesen siehe <b>Delegated Admin requests!!<br/>
+</b><b><br/>
+</b><b><span style="color: #ff0000">Delegated Admin requests: </span></b>Diese Funktion stellt sicher, dass Partner nur den Zugriff haben, den sie benötigen, um ihre Aufgaben auszuführen. &nbsp; <br/>
+Als Kunde erhalten Sie im Partner Center eine Anfrage von Ihrem Partner, die Sie genehmigen müssen, um ihm Plattform-Administratorrollen zuzuweisen. <br/>
+Sobald Sie die Anfrage genehmigt haben, kann Ihr Partner im Power Platform Admin Center (PPAC) in Ihrem Namen arbeiten. Er kann Umgebungen <br/>
+erstellen oder andere administrative Aufgaben durchführen, um Sie bei der Nutzung der Plattform zu unterstützen. &nbsp;<br/>
+<br/>
+<br/>
+Grunsätzlich gilt: jeder kann neue Umgebun in PPAC erstellen. Es ist aber möglich, dieses Recht nur auf &nbsp;bestimmte Administratoren zu beschränken.<br/>
+<img src="image.png" /><br/>
+<br/>
+<b>Was ist hier unter bestimmten Administratoren </b>gemeint?<br/>
+&nbsp;Einstellungen für<b>&nbsp;Service Level Administrator </b>werden folgermaßen bearbeitet: <ul><li style="list-style-type: none">1- gehe auf <a href="www.admin.microsoft.com">Microsoft 365 Admin Center</a></li>
+<li style="list-style-type: none">2- Users &gt; Active Users &gt; Manage Admin Roles</li>
+</ul>
+<img src="image 2.png" />&nbsp;<br/>
+<br/>
+Ein service Level administrator kann all das sehen, was sich in dem tenant befindet.<br/>
+in LCS gibt es Projekte und der Admin kann nur Umgebung in seinem Projekt sehen und in anderen Projekten nicht. in LCs schaffen die Projekt<br/>
+eine Art isolation. In PPAC wird Isolition erreicht indem man benutzer die Role System Administrator zuweiset. das sorgt dafür,dass der benutzer in PPAC<br/>
+nur die Umgebung sehen kann, in denen er die Role des System Administrator hat. So gesehen, gibt es einen Unterschieden zum Service Legel admin, der kann tenantübergrefifend sowie in einzelnen Umgebungen arbeiten<br/>
+<img src="image 3.png" /></body></html>

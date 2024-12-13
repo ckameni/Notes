@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Liefermodelle für Microsoft Power Platform</string>
+  <key>nodeid</key><string>bd0230a6-b443-45a4-abb5-2ef2f0993996</string>
+  <key>modified_time</key><integer>1734051450</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1734049421</integer>
+  <key>order</key><integer>2</integer>
+</dict>
+</node>

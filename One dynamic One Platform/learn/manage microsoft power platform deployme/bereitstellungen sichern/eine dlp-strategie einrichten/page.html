@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Eine DLP-Strategie einrichten</title>
+</head><body><br/>
+<b>DLP-Strategie einrichten</b><br/>
+Beim Start einer Power Platform-Lösung ist es wichtig, eine <b>DLP-Strategie</b>&nbsp;(Data Loss Prevention) festzulegen. Diese Richtlinien helfen, den unbeabsichtigten <br/>
+Verlust von Unternehmensdaten zu verhindern und die Informationssicherheit zu gewährleisten. DLP-Richtlinien bestimmen, welche <b>Konnektoren</b>&nbsp;in einer <br/>
+Umgebung aktiviert sind und welche zusammen verwendet werden können. Konnektoren werden in drei Gruppen unterteilt: „Nur Geschäftsdaten“, „Keine <br/>
+Geschäftsdaten zulässig“ oder „Blockiert“.<br/>
+<br/>
+Wenn ein Konnektor als „Nur Geschäftsdaten“ klassifiziert wird, darf er nur mit anderen Konnektoren derselben Gruppe kombiniert werden. Zum Beispiel: Wenn <br/>
+der Microsoft Dataverse-Konnektor als Geschäftsdaten-Konnektor gilt, kann er nur mit anderen Geschäftsdaten-Konnektoren verwendet werden.<br/>
+<br/>
+Die DLP-Richtlinien sollten in Verbindung mit der Umgebungsstrategie festgelegt werden.<br/>
+<br/>
+<br/>
+Beim Start einer Power Platform-Lösung ist es wichtig, eine <b>DLP-Strategie</b>&nbsp;(Data Loss Prevention) festzulegen, um unbeabsichtigte Datenverluste zu verhindern <br/>
+und die Sicherheit zu gewährleisten. DLP-Richtlinien legen fest, welche <b>Konnektoren</b>&nbsp;in einer Umgebung aktiviert sind und wie sie kombiniert werden dürfen. <br/>
+Konnektoren werden in drei Gruppen unterteilt: „Nur Geschäftsdaten“, „Keine Geschäftsdaten zulässig“ oder „Blockiert“.<br/>
+<br/>
+Wenn ein Konnektor als „Nur Geschäftsdaten“ klassifiziert wird, darf er in derselben App oder demselben Flow &nbsp;nur mit anderen Konnektoren derselben Gruppe verwendet werden. Beispielsweise kann <br/>
+der Microsoft Dataverse-Konnektor nur mit anderen Geschäftsdaten-Konnektoren kombiniert werden.<br/>
+&nbsp; <br/>
+<br/>
+<br/>
+<b>Konnektorklassifizierung</b><br/>
+Die Klassifizierung von Konnektoren bestimmt, wie sie in einer Power App oder einem Flow verwendet werden können:<br/>
+<ul><li><b>Geschäftlich</b>: Ein Power App oder Power Automate-Flow kann nur Konnektoren aus der Geschäftskategorie verwenden. Wenn ein Geschäftskonnektor genutzt wird, dürfen keine Nicht-Geschäftskonnektoren verwendet werden.</li>
+<li><b>Nicht geschäftlich</b>: Ein Power App oder Power Automate-Flow kann nur Konnektoren aus der Nicht-Geschäftskategorie verwenden. Geschäftskonnektoren dürfen nicht gleichzeitig verwendet werden.</li>
+<li><b>Gesperrt</b>: Konnektoren in dieser Kategorie dürfen nicht in Power Apps oder Power Automate-Flows verwendet werden. Dies betrifft Premium-Konnektoren von Microsoft und Drittanbietern.</li>
+</ul>
+<br/>
+<b>Zusammengefasst</b>: DLP-Richtlinien sorgen dafür, dass Konnektoren korrekt klassifiziert und nur in den richtigen Kombinationen verwendet werden, um die Sicherheit und Integrität der Unternehmensdaten zu gewährleisten.<br/>
+&nbsp; </body></html>
