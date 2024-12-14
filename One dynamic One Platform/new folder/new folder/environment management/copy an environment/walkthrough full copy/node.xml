@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Walkthrough Full Copy</string>
+  <key>nodeid</key><string>828c3d57-e282-4f69-889e-0a00233c508b</string>
+  <key>modified_time</key><integer>1734175319</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1734172536</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

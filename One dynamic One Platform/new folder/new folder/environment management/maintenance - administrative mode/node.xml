@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Maintenance - Administrative mode</string>
+  <key>nodeid</key><string>a852a5a9-243b-4c2d-8381-5e4d9788acae</string>
+  <key>modified_time</key><integer>1734178492</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1734178256</integer>
+  <key>order</key><integer>4</integer>
+</dict>
+</node>

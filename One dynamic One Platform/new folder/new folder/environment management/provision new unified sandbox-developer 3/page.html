@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Provision new Unified Sandbox/Developer envirnment PowerShell</title>
+</head><body><br/>
+Validate Role, LIcense, Capacity:<ul><li>&nbsp;Visit M365 Admin Center for Role and License</li>
+<li>&nbsp;Visit Capacity report in PPAC</li>
+</ul>
+<br/>
+Deploy:<ul><li>&nbsp;Open Powershell in Admin mode</li>
+<li>&nbsp;Identify Azure Region viia "Get-AdminPowerAppEnvironmentLocations" in PowerShell</li>
+<li>&nbsp;Construct JSON</li>
+<li style="list-style-type: none"><ul><li>DevToolsEnabled = False(Mark True if ceating Developer environment)</li>
+<li>DemoDateEnabled = False(Mark True if need Demo data)</li>
+</ul>
+</li>
+<li>&nbsp;Templates = D365_FinOps_Finance / D365_FinOps_SCM / D365_FinOps_ProjOps</li>
+<li>&nbsp;DomainName = For unique Environment Name(DisplayName don't guarantee env URL)</li>
+<li>&nbsp;Locationname = Run "Get-AdminPowerAppEnvironmentLocations" to identify location names such as "unitedstates"</li>
+<li>&nbsp;Always deplo on latest Service &amp; Quality Update</li>
+</ul>
+<br/>
+<a href="https://learn.microsoft.com/en-us/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PowerShell">Tutorial: Provision a new environment with an ERP-based template<br/>
+<br/>
+</a><b>First install the PowerShell module</b><a href="https://learn.microsoft.com/en-us/power-platform/admin/unified-experience/tutorial-deploy-new-environment-with-erp-template?tabs=PowerShell"><br/>
+</a>&gt; <span style="color: #0000ff">Install-Module</span>&nbsp;-Name Microsoft.PowerApps.Administration.PowerShell<br/>
+<img src="image.png" /><br/>
+<br/>
+&gt; <span style="color: #0000ff">Write-Host</span>&nbsp;"Creating a session against the Power Platform API"<br/>
+<br/>
+With the next command &nbsp;we add the admin account which will be used to deploy the environment. <br/>
+This account should have <b>product license</b>&nbsp;as well as one of the following roles:<ul><li>Dynamics 365 Administrator</li>
+<li>PowerPlatform Administrator</li>
+</ul>
+<br/>
+&gt; <span style="color: #0000ff">Add-PowerAppsAccount</span>&nbsp;-Endpoint prod<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+Now define the JSON-Object<br/>
+<br/>
+#To construct the json object to pass in<br/>
+&gt; $jsonObject= @" <br/>
+{ <br/>
+&nbsp;"PostProvisioningPackages": <br/>
+&nbsp;[ <br/>
+&nbsp;{ <br/>
+&nbsp;"applicationUniqueName": "msdyn_FinanceAndOperationsProvisioningAppAnchor", <br/>
+"parameters": "DevToolsEnabled=true|DemoDataEnabled=true" <br/>
+&nbsp;} <br/>
+&nbsp;] <br/>
+} <br/>
+"@ | ConvertFrom-Json<br/>
+<br/>
+<img src="image 3.png" /><br/>
+<br/>
+<br/>
+Now you can kick off new environment Provisionment. this will take around 40 to 50 minutes to deploy<br/>
+# IMPORTANT - This has to be a single line, after the copy &amp; paste the command<br/>
+&gt;<span style="color: #0000ff">&nbsp;New-AdminPowerAppEnvironment</span>&nbsp;-DisplayName "ODOP-UnoDev" -EnvironmentSku Sandbox -Templates "D365_FinOps_Finance" -TemplateMetadata $jsonObject -LocationName "Canada" -ProvisionDatabase<br/>
+<img src="image 4.png" /><br/>
+<br/>
+<br/>
+<br/>
+complete Code:<br/>
+<br/>
+#Install the module<br/>
+Install-Module -Name Microsoft.PowerApps.Administration.PowerShell<br/>
+<br/>
+Write-Host "Creating a session against the Power Platform API"<br/>
+<br/>
+Add-PowerAppsAccount -Endpoint prod<br/>
+<br/>
+#To construct the json object to pass in<br/>
+$jsonObject= @" <br/>
+{ <br/>
+&nbsp;"PostProvisioningPackages": <br/>
+&nbsp;[ <br/>
+&nbsp;{ <br/>
+&nbsp;"applicationUniqueName": "msdyn_FinanceAndOperationsProvisioningAppAnchor", <br/>
+"parameters": "DevToolsEnabled=true|DemoDataEnabled=true" <br/>
+&nbsp;} <br/>
+&nbsp;] <br/>
+} <br/>
+"@ | ConvertFrom-Json<br/>
+<br/>
+# To kick off new environment Provisionment<br/>
+# IMPORTANT - This has to be a single line, after the copy &amp; paste the command<br/>
+New-AdminPowerAppEnvironment -DisplayName "MyUniqueNameHere" -EnvironmentSku Sandbox -Templates "D365_FinOps_Finance" -TemplateMetadata $jsonObject -LocationName "Canada" -ProvisionDatabase<br/>
+<br/>
+</body></html>

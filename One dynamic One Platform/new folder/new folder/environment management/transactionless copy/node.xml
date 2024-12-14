@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Transactionless copy</string>
+  <key>nodeid</key><string>9ae66816-238c-49c7-8783-e7ee93ad53d3</string>
+  <key>modified_time</key><integer>1734178201</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1734175325</integer>
+  <key>order</key><integer>3</integer>
+</dict>
+</node>

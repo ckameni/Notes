@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Environment management</title>
+</head><body><br/>
+Automate Environment creation<br/>
+<br/>
+Ex1: Creates a new trial environment in the United States with the display name 'HQ Apps' &nbsp;<br/>
+<span style="color: #0000ff">New-AdminPowerAppEnvironment</span>&nbsp;<span style="color: #00ff00">-DisplayName</span>&nbsp;'HQ Apps' <span style="color: #00ff00">-Location</span>&nbsp;unitedstates -<span style="color: #00ff00">EnvironmentSku</span>&nbsp;Trial<br/>
+<br/>
+Ex2: Creates a new production environment in the United States with the display name 'HQ Dev' &nbsp;<br/>
+<span style="color: #0000ff">New-AdminPowerAppEnvironment</span>&nbsp;-<span style="color: #00ff00">DisplayName</span>&nbsp;'HQ Dev' <span style="color: #00ff00">-Location</span>&nbsp;unitedstates <span style="color: #00ff00">-EnvironmentSku</span>&nbsp;Production<br/>
+<br/>
+<br/>
+Ex2: Creates a new production environment in the United States with the display name 'HQ Dev' &nbsp;<br/>
+<span style="color: #0000ff">New-AdminPowerAppEnvironment</span>&nbsp;-<span style="color: #00ff00">DisplayName</span>&nbsp;'NewSandbox' <span style="color: #00ff00">-LocationName</span>&nbsp;"UnitedStates" <span style="color: #00ff00">-EnvironmentSku</span>&nbsp;Sandbox <span style="color: #00ff00">-ProvisionDatabase</span>&nbsp;<span style="color: #00ff00">-Templates</span>&nbsp;'D365_FinOps_Finance' </body></html>

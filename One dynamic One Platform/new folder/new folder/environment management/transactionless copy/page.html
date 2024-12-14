@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Transactionless copy</title>
+</head><body><br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+<img src="image 2.png" /><br/>
+<br/>
+<br/>
+Table group metadata is used to dynamically determine the list of tables that will not be copied to your target environment. By default, the following table groups are excluded:<br/>
+<ul><li>Transaction</li>
+<li>TransactionHeader</li>
+<li>TransactionLine</li>
+<li>Worksheet</li>
+<li>WorksheetHeader</li>
+<li>WorksheetLine</li>
+<li>Staging</li>
+</ul>
+<br/>
+These tables will not be copied to the target environment.<br/>
+If you are an ISV or a customer with custom tables you have created, please review this property and update it as needed. When using this feature, consider whether you want your custom tables to be copied or not, and set this property accordingly for your custom tables.<br/>
+<br/>
+<br/>
+<br/>
+<span style="color: #0000ff">#Install the module<br/>
+Install-Module -Name Microsoft.PowerApps.Administration.PowerShell<br/>
+<br/>
+# set Variables for your session<br/>
+$TenantId = "78897988as878f87f9d748df98d4fg12f23g1df23"<br/>
+$SourceEnvId = "21re2e1r21e1t21h22b645hc1v"<br/>
+$TargetEnvId = "löd54dg5gh54gh874hj5j465h4jf"<br/>
+<br/>
+Write-Host "Creating a session against the power Platform API"<br/>
+<br/>
+Add-PowerAppsAccount = EndPoint Pro -TenantId $TenantId<br/>
+<br/>
+$copyToRequest = [pscustomObject\]@{<ul><li style="list-style-type: none">SourceEnvironmentId = $SourceEnvId</li>
+<li style="list-style-type: none">CopyType = "FullCopy"</li>
+<li style="list-style-type: none">SkipauditData = 'true'</li>
+<li style="list-style-type: none">ExecuteAdvancedCopyForFinanceAndOperations = 'true'</li>
+</ul>
+}<br/>
+<br/>
+</span><span style="color: #0000ff">Copy-PowerAppEnvironment -Environmentname $TargetEnvId -CopyToRequestDefinition $copyToRequest</span><br/>
+<br/>
+&nbsp; </body></html>

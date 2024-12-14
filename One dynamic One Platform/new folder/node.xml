@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>D365 Tech Talk
+</string>
+  <key>nodeid</key><string>46ab52d3-b19d-47db-8125-d15262e36929</string>
+  <key>modified_time</key><integer>1734180516</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>application/x-notebook-dir</string>
+  <key>created_time</key><integer>1734180516</integer>
+  <key>order</key><integer>1</integer>
+</dict>
+</node>
